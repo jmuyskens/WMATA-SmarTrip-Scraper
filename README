@@ -5,3 +5,5 @@ Written by Justin Grimes (@justgrimes) & Josh Tauberer (@joshdata)
 Simple python script that scrapes a SmarTrip user's transit usage data from WMATA website (http://smartrip.wmata.com)
 Script authenticates into WMATA website using Mechanize library and then extracts data from HTML tables using Beautiful Soup library then writes lovely clean CSV files. Feel free to use; I claim nothing; To map returned WMATA station "short names" to proper full name to get latitude and longitude use this crosswalk:
 https://docs.google.com/spreadsheet/ccc?key=0AvcRuGkEq26jdEFLbGVlTjdJdmRnUXBBTHVOUmg0eEE&usp=sharing
+
+This script looks for your SmarTrip username and password in the environment variables `WMATA_SMARTRIP_USERNAME` and `WMATA_SMARTRIP_PASSWORD`.

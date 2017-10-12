@@ -19,8 +19,9 @@ br.open("https://smartrip.wmata.com/Account/AccountLogin.aspx") #login page
 
 br.select_form(nr=0) #form name
 
-br["ctl00$ctl00$MainContent$MainContent$txtUsername"] = os.environ['WMATA_SMARTRIP_USERNAME'] #<-- enter your username here
-br["ctl00$ctl00$MainContent$MainContent$txtPassword"] = os.environ['WMATA_SMARTRIP_PASSWORD'] #<-- enter your password here
+# Retrieve username and password from environment variables "WMATA_SMARTRIP_USERNAME" and "WMATA_SMARTRIP_PASSWORD"
+br["ctl00$ctl00$MainContent$MainContent$txtUsername"] = os.environ['WMATA_SMARTRIP_USERNAME']
+br["ctl00$ctl00$MainContent$MainContent$txtPassword"] = os.environ['WMATA_SMARTRIP_PASSWORD']
 
 response1 = br.submit().read()
 
